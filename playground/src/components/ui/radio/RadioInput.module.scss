@@ -1,0 +1,29 @@
+.radio-input {
+  cursor: pointer;
+  border-radius: 8px;
+
+  &__element {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    padding: 4px 8px;
+    border: 2px solid #ff6176;
+    border-radius: 8px;
+    text-transform: lowercase;
+    margin: 4px;
+  }
+
+  &__label:first-letter {
+    text-transform: uppercase;
+  }
+
+  &__label:hover {
+    background-color: rgba(#ff6176, 0.5);
+  }
+
+  &__element:checked + .radio-input__label {
+    background-color: #ff6176;
+  }
+}
