@@ -79,7 +79,7 @@ const Form = ({ onChange }: { onChange: (val: string) => void }) => {
                 className={classes.scoreContainer}
                 horizontal
               >
-                {Object.values(ScoreValues).map((score) => (
+                {(Object.values(ScoreValues) as string[]).map((score) => (
                   <RadioInput
                     key={score as Key}
                     name={name}
