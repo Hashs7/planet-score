@@ -1,6 +1,22 @@
+import { FunctionComponent } from 'react';
 import styles from './RadioInput.module.scss';
 
-const RadioInput = ({ label, value, name, checked = false, onChange, ...props }) => {
+interface RadioInputProps {
+  label: string;
+  value: string;
+  name: string;
+  checked?: boolean;
+  onChange?: (value: string) => void;
+}
+
+const RadioInput: FunctionComponent<RadioInputProps> = ({
+  label,
+  value,
+  name,
+  checked = false,
+  onChange,
+  ...props
+}) => {
   const classes = {
     container: styles['radio-input'],
     element: styles['radio-input__element'],

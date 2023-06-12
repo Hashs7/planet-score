@@ -4,7 +4,7 @@ import './App.css';
 import Form from '@/components/ui/form/Form';
 
 function App() {
-  const [planetScore, setPlanetScore] = useState('');
+  const [planetScore, setPlanetScore] = useState<string>('');
 
   return (
     <>

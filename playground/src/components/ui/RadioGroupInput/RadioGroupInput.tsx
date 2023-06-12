@@ -1,7 +1,21 @@
-import styles from './RadioGroupInput.module.scss';
+import { FunctionComponent, ReactNode } from 'react';
 import cn from 'classnames';
+import styles from './RadioGroupInput.module.scss';
 
-const RadioGroupInput = ({ label, children, className, horizontal, ...props }) => {
+interface RadioGroupInputProps {
+  label: string;
+  children: ReactNode;
+  className?: string;
+  horizontal?: boolean;
+}
+
+const RadioGroupInput: FunctionComponent<RadioGroupInputProps> = ({
+  label,
+  children,
+  className,
+  horizontal,
+  ...props
+}) => {
   const classes = {
     container: cn(styles['radio-group-input'], className, {
       [styles['--horizontal']]: horizontal

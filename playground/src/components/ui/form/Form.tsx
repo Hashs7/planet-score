@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { Key, useEffect, useState } from 'react';
 import { BREEDING_ANIMAL, BREEDING_CONDITION, ScoreValues } from 'planet-score';
 import RadioGroupInput from '@/components/ui/RadioGroupInput/RadioGroupInput';
 import RadioInput from '@/components/ui/radio/RadioInput';
 import styles from './Form.module.scss';
 
-const scoreInputs = [
+type scoreInputs = {
+  label: string;
+  name: string;
+};
+
+const scoreInputs: scoreInputs[] = [
   {
     label: 'Global',
     name: 'global-score'
@@ -23,10 +28,10 @@ const scoreInputs = [
   }
 ];
 
-const Form = ({ onChange }) => {
-  const [score, setScore] = useState('AAAB');
-  const [breedingAnimal, setBreedingAnimal] = useState('poule');
-  const [breedingCondition, setBreedingCondition] = useState('v');
+const Form = ({ onChange }: { onChange: (val: string) => void }) => {
+  const [score, setScore] = useState<string>('AAAB');
+  const [breedingAnimal, setBreedingAnimal] = useState<string>('poule');
+  const [breedingCondition, setBreedingCondition] = useState<string>('v');
 
   const breedingValue = `-${breedingAnimal}${breedingCondition}`;
   const scoreValue = `${score}${breedingAnimal ? breedingValue : ''}`;
@@ -42,9 +47,9 @@ const Form = ({ onChange }) => {
     setScore(newScore.join(''));
   };
 
-  const onBreedingAnimalChange = (animal) => setBreedingAnimal(animal);
+  const onBreedingAnimalChange = (animal: string) => setBreedingAnimal(animal);
 
-  const onBreedingConditionChange = (condition) => setBreedingCondition(condition);
+  const onBreedingConditionChange = (condition: string) => setBreedingCondition(condition);
 
   const classes = {
     container: styles['form'],
@@ -52,6 +57,13 @@ const Form = ({ onChange }) => {
     breeding: styles['form__breeding'],
     scoreContainer: styles['form__score-container']
   };
+
+  const breedingAnimalInputs: [string, string][] = [
+    ...(Object.entries(BREEDING_ANIMAL) as [string, string][]),
+    ['none', 'none']
+  ];
+
+  const breedingConditionInputs = Object.entries(BREEDING_CONDITION) as [string, string][];
 
   return (
     <>
@@ -69,12 +81,12 @@ const Form = ({ onChange }) => {
               >
                 {Object.values(ScoreValues).map((score) => (
                   <RadioInput
-                    key={score}
+                    key={score as Key}
                     name={name}
                     label={score}
                     value={score}
                     checked={value === score}
-                    onChange={(val) => updateScore(index, val)}
+                    onChange={(val) => updateScore(index, val as ScoreValues)}
                   />
                 ))}
               </RadioGroupInput>
@@ -84,9 +96,9 @@ const Form = ({ onChange }) => {
 
         <section className={classes.breeding}>
           <RadioGroupInput label="Breeding animal">
-            {[...Object.entries(BREEDING_ANIMAL), ['none', undefined]].map(([label, animal]) => (
+            {breedingAnimalInputs.map(([label, animal]) => (
               <RadioInput
-                key={animal}
+                key={animal as Key}
                 name="breeding-animal"
                 label={label}
                 value={animal}
@@ -97,9 +109,9 @@ const Form = ({ onChange }) => {
           </RadioGroupInput>
 
           <RadioGroupInput label="Breeding condition">
-            {Object.entries(BREEDING_CONDITION).map(([label, value]) => (
+            {breedingConditionInputs.map(([label, value]) => (
               <RadioInput
-                key={value}
+                key={value as Key}
                 name="breeding-condition"
                 label={label}
                 value={value}

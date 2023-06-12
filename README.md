@@ -45,7 +45,7 @@ function App() {
 ```
 
 
-## Available / Missing
+## Available / Missing animals
 
 Planet Score offer a score for various breeding animals but we found icon for only those animals :
 - Pig
