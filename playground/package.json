@@ -1,7 +1,7 @@
 {
   "name": "playground",
   "private": false,
-  "license": "MIT",
+  "license": "ISC",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

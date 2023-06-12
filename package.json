@@ -1,7 +1,7 @@
 {
   "name": "planet-score-repo",
   "private": true,
-  "license": "MIT",
+  "license": "ISC",
   "workspaces": [
     "lib",
     "playground"
