@@ -8,5 +8,12 @@
   "bracketSameLine": false,
   "arrowParens": "always",
   "quoteProps": "consistent",
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "importOrder": [
+    "^@/components/(.*)$",
+    "^@/constants/(.*)$",
+    "^@/styles/(.*)$",
+    "^@tests/(.*)$",
+    "^[./]"
+  ]
 }

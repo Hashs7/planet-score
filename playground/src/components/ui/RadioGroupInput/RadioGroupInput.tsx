@@ -1,5 +1,5 @@
-import { FunctionComponent, ReactNode } from 'react';
 import cn from 'classnames';
+import { FunctionComponent, ReactNode } from 'react';
 import styles from './RadioGroupInput.module.scss';
 
 interface RadioGroupInputProps {

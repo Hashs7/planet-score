@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { PlanetScore } from 'planet-score';
-import './App.css';
+import { useState } from 'react';
 import Form from '@/components/ui/form/Form';
+import './App.css';
 
 function App() {
   const [planetScore, setPlanetScore] = useState<string>('');

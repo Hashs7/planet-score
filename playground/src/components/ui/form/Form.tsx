@@ -1,5 +1,5 @@
-import { Key, useEffect, useState } from 'react';
 import { BREEDING_ANIMAL, BREEDING_CONDITION, ScoreValues } from 'planet-score';
+import { Key, useEffect, useState } from 'react';
 import RadioGroupInput from '@/components/ui/RadioGroupInput/RadioGroupInput';
 import RadioInput from '@/components/ui/radio/RadioInput';
 import styles from './Form.module.scss';
