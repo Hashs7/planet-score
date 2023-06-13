@@ -1,18 +1,22 @@
 .radio-input {
-  cursor: pointer;
+  display: block;
+  overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
+  margin: 4px;
+  text-align: center;
 
   &__element {
     display: none;
   }
 
   &__label {
+    border-radius: 8px;
+    color: $primary-500;
+    border: 2px solid $primary-500;
     display: block;
     padding: 4px 8px;
-    border: 2px solid #ff6176;
-    border-radius: 8px;
     text-transform: lowercase;
-    margin: 4px;
   }
 
   &__label:first-letter {
@@ -20,10 +24,12 @@
   }
 
   &__label:hover {
-    background-color: rgba(#ff6176, 0.5);
+    color: $white;
+    background-color: $primary-500;
   }
 
   &__element:checked + .radio-input__label {
-    background-color: #ff6176;
+    color: $white;
+    background-color: $primary-500;
   }
 }

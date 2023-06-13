@@ -1,10 +1,11 @@
 import cn from 'classnames';
 import { FunctionComponent, ReactNode } from 'react';
-import styles from './RadioGroupInput.module.scss';
+import './RadioGroupInput.scss';
 
 interface RadioGroupInputProps {
   label: string;
   children: ReactNode;
+  percentage?: number;
   className?: string;
   horizontal?: boolean;
 }
@@ -13,19 +14,31 @@ const RadioGroupInput: FunctionComponent<RadioGroupInputProps> = ({
   label,
   children,
   className,
+  percentage,
   horizontal,
   ...props
 }) => {
   const classes = {
-    container: cn(styles['radio-group-input'], className, {
-      [styles['--horizontal']]: horizontal
+    container: cn('radio-group-input', className, {
+      ['--horizontal']: horizontal
     })
   };
+  console.log(percentage);
+
+  const translateDirection = horizontal ? 'X' : 'Y';
 
   return (
-    <fieldset {...props} className={classes.container}>
+    <fieldset className={classes.container} {...props}>
       <legend>{label}</legend>
-      {children}
+      <span className="radio-group-input__container">
+        {children}
+        {percentage !== undefined ? (
+          <span
+            className="radio-group-input__background"
+            style={{ transform: `translate${translateDirection}(${percentage}%)` }}
+          ></span>
+        ) : null}
+      </span>
     </fieldset>
   );
 };

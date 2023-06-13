@@ -1,24 +1,24 @@
 .form {
   display: flex;
+  align-items: stretch;
+  gap: 32px;
+  text-align: left;
 
   &__scores {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
   }
 
   &__score-container {
     flex-grow: 0;
     width: 100%;
-    height: 100%;
   }
 
   &__breeding {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    align-items: stretch;
   }
 }
