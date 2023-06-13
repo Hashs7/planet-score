@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlanetScoreCursor> (A) renders the PlanetScoreCursor 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(0 0)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<PlanetScoreCursor> (B) renders the PlanetScoreCursor 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(108 0)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<PlanetScoreCursor> (C) renders the PlanetScoreCursor 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(216 0)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<PlanetScoreCursor> (D) renders the PlanetScoreCursor 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(324 0)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<PlanetScoreCursor> (E) renders the PlanetScoreCursor 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(432 0)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<PlanetScoreCursor> should set translateY value 1`] = `
+<div>
+  <svg>
+    <g
+      class="cursor"
+      transform="translate(0 200)"
+    >
+      <path
+        d="M572.2,346.6c-16,0-29,13-29,29s13,29,29,29c16,0,29-13,29-29S588.1,346.6,572.2,346.6z"
+        style="fill: #FDFDFD;"
+      />
+      <path
+        d="M572.2,336.6c-21.5,0-39,17.5-39,39s17.5,39,39,39c21.5,0,39-17.5,39-39S593.7,336.6,572.2,336.6z
+		 M543.2,375.6c0-16,13-29,29-29c16,0,29,13,29,29s-13,29-29,29C556.2,404.6,543.2,391.6,543.2,375.6z"
+        style="fill: #273259;"
+      />
+    </g>
+  </svg>
+</div>
+`;

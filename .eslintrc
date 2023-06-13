@@ -18,6 +18,7 @@
     "react-refresh/only-export-components": "warn"
   },
   "env": {
+    "jest": true,
     "browser": true,
     "es2020": true
   }

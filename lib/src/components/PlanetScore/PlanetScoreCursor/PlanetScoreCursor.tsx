@@ -2,7 +2,7 @@ import { SCORE_POSITIONS, ScoreValues } from '@/constants';
 import { FunctionComponent } from 'react';
 
 interface PlanetScoreCursorProps {
-  score?: ScoreValues;
+  score: ScoreValues;
   translateY?: number;
 }
 

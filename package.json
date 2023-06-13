@@ -8,6 +8,8 @@
   ],
   "scripts": {
     "lib:build": "yarn workspace planet-score build",
+    "lib:test": "yarn workspace planet-score test",
+    "lib:test:update": "yarn workspace planet-score test:update",
     "playground:dev": "yarn workspace playground dev",
     "playground:build": "yarn workspace playground build"
   },
