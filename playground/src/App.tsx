@@ -11,6 +11,12 @@ function App() {
 
       <Form onChange={(score) => setPlanetScore(score)} />
 
+      <pre className="code">
+        <code>{`import { PlanetScore } from "planet-score";`}</code>
+        <code></code>
+        <code>{`<PlanetScore value="${planetScore}" />`}</code>
+      </pre>
+
       <PlanetScore value={planetScore} />
     </>
   );

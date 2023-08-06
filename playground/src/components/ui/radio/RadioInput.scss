@@ -12,11 +12,13 @@
 
   &__label {
     border-radius: 8px;
-    color: $primary-500;
+    color: $white;
     border: 2px solid $primary-500;
     display: block;
     padding: 4px 8px;
     text-transform: lowercase;
+    background-repeat: no-repeat;
+    transition: all .2s ease-in-out;
   }
 
   &__label:first-letter {
@@ -31,5 +33,19 @@
   &__element:checked + .radio-input__label {
     color: $white;
     background-color: $primary-500;
+  }
+
+  $gradiant-colors: $darkGreen, $green, $yellow, $orange, $red;
+  @each $color in $gradiant-colors {
+    $i: index($gradiant-colors, $color);
+
+    &.--gradient:nth-child(#{$i}) .radio-input__label {
+      border-color: darken($color, 5);
+      background-color: $color;
+
+      &:hover {
+        background-color: darken($color, 5);;
+      }
+    }
   }
 }

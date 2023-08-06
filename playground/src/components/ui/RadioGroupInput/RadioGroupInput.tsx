@@ -35,7 +35,10 @@ const RadioGroupInput: FunctionComponent<RadioGroupInputProps> = ({
         {percentage !== undefined ? (
           <span
             className="radio-group-input__background"
-            style={{ transform: `translate${translateDirection}(${percentage}%)` }}
+            style={{
+              transform: `translate${translateDirection}(${percentage}%)`,
+              backgroundPosition: `${percentage}% center`
+            }}
           ></span>
         ) : null}
       </span>

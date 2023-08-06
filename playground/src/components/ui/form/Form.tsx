@@ -60,7 +60,7 @@ const Form = ({ onChange }: { onChange: (val: string) => void }) => {
 
   const breedingAnimalInputs: [string, string][] = [
     ...(Object.entries(BREEDING_ANIMAL) as [string, string][]),
-    ['none', 'none']
+    ['none', '']
   ];
 
   const breedingConditionInputs = Object.entries(BREEDING_CONDITION) as [string, string][];
@@ -70,76 +70,74 @@ const Form = ({ onChange }: { onChange: (val: string) => void }) => {
     100;
 
   return (
-    <>
-      <form className={classes.container}>
-        <section>
-          <h2>Scores</h2>
+    <form className={classes.container}>
+      <section>
+        <h2>Scores</h2>
 
-          <div className={classes.scores}>
-            {scoreInputs.map(({ label, name }, index) => {
-              const value = score.split('')[index] as ScoreValues;
-              const percentage =
-                (Object.values(ScoreValues).indexOf(value) / Object.values(ScoreValues).length) *
-                100;
+        <div className={classes.scores}>
+          {scoreInputs.map(({ label, name }, index) => {
+            const value = score.split('')[index] as ScoreValues;
+            const percentage =
+              (Object.values(ScoreValues).indexOf(value) / Object.values(ScoreValues).length) * 100;
 
-              return (
-                <RadioGroupInput
-                  label={label}
-                  key={name}
-                  className={classes.scoreContainer}
-                  percentage={percentage}
-                  horizontal
-                >
-                  {(Object.values(ScoreValues) as string[]).map((score) => (
-                    <RadioInput
-                      key={score as Key}
-                      name={name}
-                      label={score}
-                      value={score}
-                      checked={value === score}
-                      onChange={(val) => updateScore(index, val as ScoreValues)}
-                    />
-                  ))}
-                </RadioGroupInput>
-              );
-            })}
-          </div>
-        </section>
+            return (
+              <RadioGroupInput
+                label={label}
+                key={name}
+                className={classes.scoreContainer}
+                percentage={percentage}
+                horizontal
+              >
+                {(Object.values(ScoreValues) as string[]).map((score) => (
+                  <RadioInput
+                    key={score as Key}
+                    name={name}
+                    label={score}
+                    value={score}
+                    checked={value === score}
+                    onChange={(val) => updateScore(index, val as ScoreValues)}
+                    gradient
+                  />
+                ))}
+              </RadioGroupInput>
+            );
+          })}
+        </div>
+      </section>
 
-        <section>
-          <h2>Breeding</h2>
+      <section>
+        <h2>Breeding</h2>
 
-          <div className={classes.breeding}>
-            <RadioGroupInput label="Animal">
-              {breedingAnimalInputs.map(([label, animal]) => (
-                <RadioInput
-                  key={animal as Key}
-                  name="breeding-animal"
-                  label={label}
-                  value={animal}
-                  onChange={onBreedingAnimalChange}
-                  checked={animal === breedingAnimal}
-                />
-              ))}
-            </RadioGroupInput>
+        <div className={classes.breeding}>
+          <RadioGroupInput label="Animal">
+            {breedingAnimalInputs.map(([label, animal]) => (
+              <RadioInput
+                key={animal as Key}
+                name="breeding-animal"
+                label={label}
+                value={animal}
+                onChange={onBreedingAnimalChange}
+                checked={animal === breedingAnimal}
+              />
+            ))}
+          </RadioGroupInput>
 
-            <RadioGroupInput label="Condition" percentage={breedingPercentage}>
-              {breedingConditionInputs.map(([label, value]) => (
-                <RadioInput
-                  key={value as Key}
-                  name="breeding-condition"
-                  label={label}
-                  value={value}
-                  onChange={onBreedingConditionChange}
-                  checked={value === breedingCondition}
-                />
-              ))}
-            </RadioGroupInput>
-          </div>
-        </section>
-      </form>
-      <p>Score value: {scoreValue}</p>
-    </>
+          <RadioGroupInput label="Condition" percentage={breedingPercentage}>
+            {breedingConditionInputs.map(([label, value]) => (
+              <RadioInput
+                key={value as Key}
+                name="breeding-condition"
+                label={label}
+                value={value}
+                onChange={onBreedingConditionChange}
+                checked={value === breedingCondition}
+                gradient
+              />
+            ))}
+          </RadioGroupInput>
+        </div>
+      </section>
+    </form>
   );
 };
 

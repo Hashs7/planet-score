@@ -19,13 +19,18 @@
     right: 0;
     z-index: -1;
     border-radius: 8px;
-    background-color: $primary-800;
+    background: linear-gradient(to top, #11998e, #38ef7d);
     transition: transform .2s ease;
   }
 
 
-  &.--horizontal .radio-group-input__container{
-    flex-direction: row;
-    justify-content: space-between;
+  &.--horizontal {
+    .radio-group-input__background {
+      background: linear-gradient(to left, #11998e, #38ef7d);
+    }
+    .radio-group-input__container{
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }

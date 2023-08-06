@@ -24,6 +24,47 @@ fieldset {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.code {
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 8px;
+  text-align: left;
+  background-color: black;
+
+  display: block;
+  white-space: pre;
+  max-width: 100%;
+  min-width: 100px;
+
+  code {
+    display: block;
+  }
+
+  .keyword {
+    color: #0000ff;
+  }
+
+  .string {
+    color: #008000;
+  }
+
+  .comment {
+    color: #808080;
+  }
+}
+
+pre {
+  counter-reset: line;
+}
+
+code::before {
+  content: counter(line);
+  counter-increment: line;
+  padding-right: 1em;
+  color: #808080;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
