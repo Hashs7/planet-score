@@ -8,14 +8,15 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      // rollupTypes: true
-      // insertTypesEntry: true,
+      // rollupTypes: true,
+      insertTypesEntry: true
     })
   ],
   resolve: {
     alias: [{ find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) }]
   },
   build: {
+    sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'PlanetScore',
