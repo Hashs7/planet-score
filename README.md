@@ -41,7 +41,6 @@ If you find those icons, feel free to open a pull request or send me a message.
 
 - Add configuration for custom breeding animal names, breeding conditions and separator.
 - Add components tests
-- Publish to NPM
 - Deploy playground website
 
 
