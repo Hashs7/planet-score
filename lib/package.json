@@ -1,7 +1,7 @@
 {
   "name": "planet-score",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.4",
   "license": "ISC",
   "type": "module",
   "author": {
@@ -17,7 +17,8 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --write ./src",
     "preview": "vite preview",
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
+    "prepack": "copyfiles ../README.md ./README.md",
+    "publish": "npm publish --access public",
     "test": "NODE_ENV=test jest",
     "test:update": "yarn test -u"
   },
@@ -42,6 +43,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.2",
+    "copyfiles": "^2.4.1",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "ts-jest": "^29.1.0",

@@ -7,33 +7,6 @@ Learn more at [planet-score.org](https://www.planet-score.org)
 This library offers a React component to display the score on your website.
 
 
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone git@github.com:Hashs7/planet-score.git
-```
-
-Go to the project directory
-
-```bash
-  cd planet-score
-```
-
-Install dependencies
-
-```bash
-  yarn install
-```
-
-Start the playground website
-
-```bash
-  yarn run playground:dev
-```
-
-
 ## Usage
 
 ```javascript
@@ -70,3 +43,30 @@ If you find those icons, feel free to open a pull request or send me a message.
 - Add components tests
 - Publish to NPM
 - Deploy playground website
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone git@github.com:Hashs7/planet-score.git
+```
+
+Go to the project directory
+
+```bash
+  cd planet-score
+```
+
+Install dependencies
+
+```bash
+  yarn install
+```
+
+Start the playground website
+
+```bash
+  yarn run playground:dev
+```
