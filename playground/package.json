@@ -14,7 +14,8 @@
     "classnames": "^2.3.2",
     "planet-score": "*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",

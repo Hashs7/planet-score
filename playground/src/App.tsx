@@ -1,9 +1,15 @@
 import { PlanetScore } from 'planet-score';
 import { useState } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Form from '@/components/ui/form/Form';
 
 function App() {
   const [planetScore, setPlanetScore] = useState<string>('');
+
+  const code = `import { PlanetScore } from "planet-score";
+
+<PlanetScore value="${planetScore}" />`;
 
   return (
     <>
@@ -11,11 +17,11 @@ function App() {
 
       <Form onChange={(score) => setPlanetScore(score)} />
 
-      <pre className="code">
-        <code>{`import { PlanetScore } from "planet-score";`}</code>
-        <code></code>
-        <code>{`<PlanetScore value="${planetScore}" />`}</code>
-      </pre>
+      <div className="code-block">
+        <SyntaxHighlighter language="jsx" style={dracula} showLineNumbers codeBlock>
+          {code}
+        </SyntaxHighlighter>
+      </div>
 
       <PlanetScore value={planetScore} />
     </>
